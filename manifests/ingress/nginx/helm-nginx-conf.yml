@@ -1,0 +1,11 @@
+# https://kubernetes.github.io/ingress-nginx/
+controller:
+  kind: DaemonSet
+  hostNetwork: true
+  hostPort:
+    enabled: true
+    ports:
+      http: 80
+      https: 443
+service:
+  enabled: false

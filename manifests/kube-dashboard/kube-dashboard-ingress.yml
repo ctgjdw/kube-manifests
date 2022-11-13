@@ -9,8 +9,12 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - "dash.k8s.ctg.com"
   rules:
-    - http:
+    - host: "dash.k8s.ctg.com"
+      http:
         paths:
           - path: /
             pathType: Prefix

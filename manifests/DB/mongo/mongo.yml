@@ -29,7 +29,7 @@ metadata:
   labels:
     app: ansible-player-mongo
 spec:
-  storageClassName: local-storage
+  storageClassName: rook-ceph-block
   accessModes:
     - ReadWriteOnce
   resources:
